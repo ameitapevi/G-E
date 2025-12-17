@@ -6,7 +6,6 @@
   <title>Painel de Gerenciamento de Riscos e Oportunidades</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-
   <style>
     :root{
       --bg:#f4f6f8;
@@ -475,6 +474,42 @@
     @media (prefers-reduced-motion: reduce){
       *{ transition:none !important; }
     }
+
+/* ===== BREAKPOINT DE TRANSIÇÃO (TABLET PEQUENO / MOBILE GRANDE) ===== */
+@media (max-width: 564px){
+
+  /* HERO: força empilhamento definitivo */
+  .hero{
+    grid-template-columns: 1fr;
+    margin-top: 12px;
+  }
+
+  /* KPIs: evita quebra irregular */
+  .kpis{
+    flex-direction: column;
+  }
+
+  .kpi{
+    width: 100%;
+    min-width: auto;
+  }
+
+  /* Toolbar: evita esmagamento */
+  .toolbar{
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .search-wrap{
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #clearBtn{
+    width: 100%;
+  }
+}
   </style>
 </head>
 
